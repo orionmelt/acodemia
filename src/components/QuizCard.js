@@ -27,6 +27,10 @@ class QuizCard extends Component {
     });
   }
 
+  componentWillUnmount() {
+    users.child(this.props.quiz.author).off('value');
+  }
+
   render() {
     if (this.state.loading) return null;
 
