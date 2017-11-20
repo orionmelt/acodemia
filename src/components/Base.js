@@ -29,11 +29,12 @@ class Base extends Component {
         this.setState({ loading: false });
         return;
       }
+      let name = user.displayName ? user.displayName.split(' ')[0] : user.email.split('@')[0];
       user = {
         uid: user.uid,
         email: user.email,
         photoURL: user.photoURL,
-        displayName: user.displayName.split(' ')[0]
+        displayName: name
       };
       users.child(user.uid).update(user);
       this.setState({

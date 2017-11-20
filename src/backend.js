@@ -5,6 +5,7 @@ firebase.initializeApp(firebaseConfig);
 
 export const google = new firebase.auth.GoogleAuthProvider();
 export const facebook = new firebase.auth.FacebookAuthProvider();
+export const github = new firebase.auth.GithubAuthProvider();
 export const auth = firebase.auth();
 export const database = firebase.database();
 export const quizzes = database.ref('quizzes');

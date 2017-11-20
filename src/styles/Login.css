@@ -32,3 +32,14 @@
   background-color: #30487c;
   border-color: #2a3f6d;
 }
+
+.github {
+  background-color: #24292e;
+  border-color: #24292e;
+  width: 10rem;
+}
+
+.github:hover {
+  background-color: #000;
+  border-color: #000;
+}

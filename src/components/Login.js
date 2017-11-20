@@ -3,7 +3,7 @@ import { Container, Row, Col, Button } from 'reactstrap';
 
 import 'Login.css';
 
-import { quizzes, google, facebook } from 'backend';
+import { quizzes, google, facebook, github } from 'backend';
 import QuizList from 'QuizList';
 
 
@@ -12,6 +12,7 @@ class Login extends Component {
     super(props);
     this.loginWithGoogle = this.loginWithGoogle.bind(this);
     this.loginWithFacebook = this.loginWithFacebook.bind(this);
+    this.loginWithGithub = this.loginWithGithub.bind(this);
     this.state = {
       quizzes: [],
       loading: true
@@ -41,6 +42,10 @@ class Login extends Component {
     this.props.onLogin(facebook);
   }
 
+  loginWithGithub() {
+    this.props.onLogin(github);
+  }
+
   render() {
     if (this.state.loading) return null;
 
@@ -63,6 +68,8 @@ class Login extends Component {
                 </Button>
                 <br />
                 <Button className="google margin-sm" onClick={this.loginWithGoogle}>Google</Button>
+                <br />
+                <Button className="github margin-sm" onClick={this.loginWithGithub}>GitHub</Button>
               </div>
             </Col>
           </Row>
