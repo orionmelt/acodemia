@@ -22,3 +22,7 @@ yarn-error.log*
 
 # API keys
 keys.js
+
+# firebase hosting
+firebase.json
+.firebaserc
