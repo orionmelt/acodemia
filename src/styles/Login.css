@@ -1,0 +1,34 @@
+.intro {
+  background-color: #A2CAD3;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+.login {
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--light);
+  border-radius: .25rem;
+}
+
+.google {
+  background-color: #dd4b39;
+  border-color: #dd4b39;
+  width: 10rem;
+}
+
+.google:hover {
+  background-color: #ca3523;
+  border-color: #b93120;
+}
+
+.facebook {
+  background-color: #3b5998;
+  border-color: #3b5998;
+  width: 10rem;
+}
+
+.facebook:hover {
+  background-color: #30487c;
+  border-color: #2a3f6d;
+}

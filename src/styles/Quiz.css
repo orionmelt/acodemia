@@ -1,0 +1,40 @@
+.quiz {
+}
+
+.quiz>.intro {
+  text-align: center;
+  background-color: #eee;
+  padding: 80px 40px;
+  border-radius: .25rem;
+}
+
+.topic-tag {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: .25rem .5rem;
+  font-size: .7rem;
+  font-weight: bold;
+  border-radius: .25rem;
+}
+
+.answer {
+  border: 1px solid #ddd;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  border-radius: .25rem;
+}
+
+
+.correct {
+  background-color: var(--success);
+  border: 1px solid var(--success);
+  color: #fff;
+}
+
+.wrong {
+  background-color: var(--danger);
+  border: 1px solid var(--danger);
+  color: #fff;
+}

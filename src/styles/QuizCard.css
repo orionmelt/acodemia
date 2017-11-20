@@ -1,0 +1,44 @@
+.quiz-card {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.quiz-card>.topic {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  min-width: 100px;
+  min-height: 100px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .7rem;
+}
+
+.quiz-card>.count {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  min-width: 100px;
+  background-color: var(--light);
+  padding-left: 2rem;
+}
+
+.quiz-card>.count>.value {
+  font-size: 1.25rem;
+  padding: .25rem;
+  margin: .25rem 0;
+  color: var(--white);
+  background-color: var(--secondary);
+  border-radius: .25rem;
+}
+
+.quiz-card>.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--light);
+  padding-left: 2rem;
+  flex: 1;
+}

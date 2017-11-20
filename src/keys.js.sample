@@ -1,0 +1,7 @@
+export const firebaseConfig = {
+  apiKey: 'YOUR_FIREBASE_API_KEY',
+  authDomain: 'YOUR_FIREBASE_AUTH_DOMAIN',
+  projectId: 'YOUR_FIREBASE_PROJECT_ID',
+  databaseURL: 'YOUR_FIREBASE_DB_URL',
+  messagingSenderId: 'YOUR_FIREBASE_MSG_SENDER_ID'
+};

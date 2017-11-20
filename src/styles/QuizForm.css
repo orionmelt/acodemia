@@ -1,0 +1,19 @@
+.quiz-form {
+  padding: 1rem 0;
+}
+
+.publish-preview {
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid var(--dark);
+}
+
+.question-item {
+  padding: 1rem 0;
+}
+
+.question-preview {
+  padding: 1rem;
+  border: 1px solid var(--secondary);
+  border-radius: .25rem;
+}

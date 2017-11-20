@@ -1,0 +1,28 @@
+.user-profile {
+  text-align: center;
+}
+.user-profile .header {
+  background-color: var(--success);
+  color: var(--white);
+  padding: 1.5rem;
+}
+
+.user-profile .header>img {
+  min-height: 64px;
+  min-width: 64px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid var(--white);
+}
+
+.user-profile .body {
+  background-color: var(--light);
+  padding: 1.5rem;
+}
+
+.user-profile .body>.count-badge {
+  display: inline-block;
+  width: 50%;
+}
