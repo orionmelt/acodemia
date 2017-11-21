@@ -88,9 +88,8 @@ class Quiz extends Component {
       );
       quizzes.child(this.state.quiz.id).child('takenCount')
         .transaction((takenCount) => takenCount + 1);
-      users.child(this.props.user.uid).child('takenQuizzes').update({
-        [this.state.quiz.id]: 1
-      });
+      users.child(this.props.user.uid).child('takenQuizzes').child(this.state.quiz.id)
+        .transaction((score) => Math.max(score, this.state.score));
     }
   }
 
