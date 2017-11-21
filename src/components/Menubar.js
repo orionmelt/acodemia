@@ -28,7 +28,7 @@ class Menubar extends Component {
         <Container>
           <Navbar color="dark" className="navbar-dark" expand="md">
             <NavbarBrand tag={Link} to="/">
-              <img src="/favicon.png" alt="Acodemia Logo" width="30" class="logo" />
+              <img src="/favicon.png" alt="Acodemia Logo" width="30" className="logo" />
               ACODEMIA
             </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
