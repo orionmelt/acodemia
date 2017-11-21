@@ -3,8 +3,7 @@ import { Container, Row, Col, Button } from 'reactstrap';
 
 import 'Login.css';
 
-import { quizzes, google, facebook, github } from 'backend';
-import QuizList from 'QuizList';
+import { google, facebook, github } from 'backend';
 
 
 class Login extends Component {
@@ -13,25 +12,6 @@ class Login extends Component {
     this.loginWithGoogle = this.loginWithGoogle.bind(this);
     this.loginWithFacebook = this.loginWithFacebook.bind(this);
     this.loginWithGithub = this.loginWithGithub.bind(this);
-    this.state = {
-      quizzes: [],
-      loading: true
-    };
-  }
-
-  componentDidMount() {
-    quizzes.limitToLast(5).on('value', (data) => {
-      var quizzes = [];
-      data.forEach((child) => {
-        var quiz = child.val();
-        quiz['.key'] = child.key;
-        quizzes.push(quiz);
-      });
-      this.setState({
-        quizzes: quizzes,
-        loading: false
-      });
-    });
   }
 
   loginWithGoogle() {
@@ -47,16 +27,19 @@ class Login extends Component {
   }
 
   render() {
-    if (this.state.loading) return null;
-
     return (
       <div>
       <div className="intro">
         <Container className="main-container">
           <Row>
-            <Col md="8" xs="12">
-              <h1 className="display-4">Tagline here.</h1>
-              <img src="http://via.placeholder.com/400x200" alt="Placeholder" />
+            <Col md="6" xs="12">
+              <h1 className="display-4">Answer me this.</h1>
+              <p>
+                Evaluate and improve your skills by taking quizzes 
+                created by developers just like you.
+              </p>
+            </Col>
+            <Col md="2">
             </Col>
             <Col md="4" xs="12">
               <div className="login">
@@ -78,12 +61,24 @@ class Login extends Component {
       <Container>
         <Row>
           <Col>
-            <h4>Create your own quizzes</h4>
-            <p>Help other developers test their skills.</p>
+            <h4>Create your own quiz</h4>
+            <p>
+              Are you a Python expert? JavaScript mastermind? Help other developers 
+              test their skills in technologies you know and love.
+            </p>
+            <p>
+              Create a quiz. It'll be your good deed for today.
+            </p>
           </Col>
           <Col>
-            <h4>Latest quizzes</h4>
-            <QuizList quizzes={this.state.quizzes} />
+            <h4>Take a quiz</h4>
+            <p>
+              Not feeling creative? That's okay.
+            </p>
+            <p>
+              Take a quiz created by your fellow developers. Answer most questions 
+              correctly in the shortest amount of time to climb the leaderboards.
+            </p>
           </Col>
         </Row>
       </Container>

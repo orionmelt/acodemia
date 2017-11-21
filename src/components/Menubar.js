@@ -27,7 +27,10 @@ class Menubar extends Component {
       <header>
         <Container>
           <Navbar color="dark" className="navbar-dark" expand="md">
-            <NavbarBrand tag={Link} to="/">ACODEMIA</NavbarBrand>
+            <NavbarBrand tag={Link} to="/">
+              <img src="/favicon.png" alt="Acodemia Logo" width="30" class="logo" />
+              ACODEMIA
+            </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               {this.props.user ? (

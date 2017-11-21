@@ -28,6 +28,10 @@ footer {
   height: 40px;
 }
 
+.logo {
+  margin-right: .5rem;
+}
+
 .text-xs {
   font-size: .5rem;
 }
