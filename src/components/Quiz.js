@@ -125,7 +125,9 @@ class Quiz extends Component {
                     <Col sm="6" xs="12">
                       <h5>
                         {this.state.quiz.name}{' '}
-                        <span className="topic-tag">{this.state.topic.name}</span>
+                        <div className={'topic-tag ' + this.state.topic.id}>
+                          {this.state.topic.name}
+                        </div>
                       </h5>
                     </Col>
                     <Col sm="3" xs="6">
