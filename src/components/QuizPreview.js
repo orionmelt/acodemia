@@ -4,7 +4,7 @@ import { Button, Alert } from 'reactstrap';
 
 import UserBadge from 'UserBadge';
 
-const MIN_QUESTIONS = 5;
+const MIN_QUESTIONS = 4;
 
 class QuizPreview extends Component {
   render() {
