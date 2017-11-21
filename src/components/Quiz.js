@@ -104,7 +104,7 @@ class Quiz extends Component {
 
     return (
       <Row>
-        <Col lg="9" xs="12">
+        <Col lg="8" xs="12">
           <div className="quiz">
             {{
               'init': (
@@ -167,7 +167,7 @@ class Quiz extends Component {
             }[this.state.state]}
           </div>
         </Col>
-        <Col lg="3" xs="12">
+        <Col lg="4" xs="12">
           <h5 className="text-center">Leaderboard</h5>
           <Leaderboard quizID={this.quizID} />
         </Col>
