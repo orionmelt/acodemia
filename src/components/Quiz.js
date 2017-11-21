@@ -76,6 +76,7 @@ class Quiz extends Component {
       this.setState({ currQuestionIndex: this.state.currQuestionIndex + 1 });
     } else {
       this.setState({ state: 'ended' });
+      let priority = this.state.score + (1 / this.state.secondsElapsed);
       leaderboards.child(this.state.quiz.id).child(this.props.user.uid).setWithPriority(
         {
           displayName: this.props.user.displayName,
@@ -83,7 +84,7 @@ class Quiz extends Component {
           time: this.state.secondsElapsed,
           score: this.state.score
         },
-        -this.state.score
+        -priority
       );
       quizzes.child(this.state.quiz.id).child('takenCount')
         .transaction((takenCount) => takenCount + 1);
